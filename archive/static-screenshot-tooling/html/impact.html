@@ -1,0 +1,139 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"/><style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at 15% 0%, #131B33 0%, #0B1120 55%, #080C16 100%);
+  color: #F8FAFC;
+  width: 1600px;
+  min-height: 1000px;
+  overflow: hidden;
+}
+.mono { font-family: 'Liberation Mono', monospace; }
+.app { display:flex; width:1600px; min-height:1000px; }
+
+/* ---------- Sidebar ---------- */
+.sidebar {
+  width: 234px; flex-shrink:0;
+  background: rgba(16,23,42,0.85);
+  border-right: 1px solid rgba(255,255,255,0.06);
+  display:flex; flex-direction:column;
+  backdrop-filter: blur(20px);
+}
+.brand { height:72px; display:flex; align-items:center; padding:0 22px; border-bottom:1px solid rgba(255,255,255,0.06); }
+.brand-mark { width:30px; height:30px; border-radius:9px; background:linear-gradient(135deg,#00C4EE,#0B84AC); display:flex; align-items:center; justify-content:center; margin-right:11px; box-shadow:0 0 18px rgba(0,196,238,0.45); }
+.brand-mark span { font-weight:700; font-size:14px; color:#0B1120; }
+.brand-name { font-size:16px; font-weight:600; letter-spacing:0.2px; }
+.nav { flex:1; padding:14px 12px; }
+.nav-item { display:flex; align-items:center; gap:11px; padding:11px 13px; border-radius:9px; margin-bottom:3px; font-size:13.5px; font-weight:500; color:#8B96AC; position:relative; }
+.nav-item.active { color:#F8FAFC; background:rgba(0,196,238,0.10); box-shadow:inset 0 0 0 1px rgba(0,196,238,0.28); }
+.nav-item.active::before { content:''; position:absolute; left:-12px; top:8px; bottom:8px; width:3px; border-radius:3px; background:#00C4EE; box-shadow:0 0 10px #00C4EE; }
+.nav-icon { width:16px; height:16px; flex-shrink:0; }
+.user-box { padding:16px; border-top:1px solid rgba(255,255,255,0.06); display:flex; align-items:center; gap:10px; }
+.avatar { width:30px; height:30px; border-radius:50%; background:linear-gradient(135deg,#00C4EE,#0B84AC); display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:600; color:#0B1120; }
+.user-name { font-size:12.5px; font-weight:500; }
+.user-role { font-size:10.5px; color:#6B7690; }
+
+/* ---------- Main ---------- */
+.main { flex:1; display:flex; flex-direction:column; min-width:0; }
+.topbar { height:72px; flex-shrink:0; display:flex; align-items:center; justify-content:space-between; padding:0 32px; border-bottom:1px solid rgba(255,255,255,0.06); background:rgba(11,17,32,0.4); }
+.topbar h1 { font-size:18px; font-weight:600; }
+.topbar .sub { font-size:12px; color:#8B96AC; margin-top:2px; }
+.search-pill { display:flex; align-items:center; gap:9px; padding:9px 16px; border-radius:9px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); font-size:12.5px; color:#8B96AC; min-width:230px; }
+.bell { width:34px; height:34px; border-radius:9px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); display:flex; align-items:center; justify-content:center; position:relative; margin-left:12px; }
+.bell::after { content:''; position:absolute; top:7px; right:7px; width:6px; height:6px; border-radius:50%; background:#FF6000; box-shadow:0 0 8px #FF6000; }
+.content { flex:1; padding:34px 40px; overflow:hidden; }
+
+/* ---------- Glass card ---------- */
+.card {
+  background: rgba(255,255,255,0.035);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 10px 34px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.04);
+}
+.card.urgent { border-color: rgba(255,96,0,0.5); box-shadow: 0 0 0 1px rgba(255,96,0,0.25), 0 10px 30px rgba(255,96,0,0.08); }
+.card.glow { box-shadow: 0 0 0 1px rgba(0,196,238,0.35), 0 0 30px rgba(0,196,238,0.12); }
+
+/* ---------- Tags ---------- */
+.tag { font-family:'Liberation Mono',monospace; font-size:9.5px; letter-spacing:0.6px; text-transform:uppercase; padding:4px 9px; border-radius:5px; background:rgba(255,255,255,0.06); color:#9AA5BD; }
+.tag.alert { background:rgba(255,96,0,0.16); color:#FF9256; }
+.tag.cyan { background:rgba(0,196,238,0.14); color:#5FE2FF; }
+
+/* ---------- Confidence bar (signature element) ---------- */
+.conf { display:flex; align-items:center; gap:8px; }
+.conf-segs { display:flex; gap:3px; }
+.conf-seg { width:9px; height:9px; border-radius:2px; background:rgba(255,255,255,0.10); }
+.conf-seg.on { background:#00C4EE; box-shadow:0 0 6px rgba(0,196,238,0.8); }
+.conf-seg.on.orange { background:#FF6000; box-shadow:0 0 6px rgba(255,96,0,0.8); }
+.conf-label { font-family:'Liberation Mono',monospace; font-size:11px; color:#5FE2FF; }
+.conf-label.orange { color:#FF9256; }
+.conf-meta { font-family:'Liberation Mono',monospace; font-size:11px; color:#6B7690; }
+
+h2.page-title { font-size:22px; font-weight:600; margin-bottom:4px; }
+p.page-desc { font-size:13px; color:#8B96AC; margin-bottom:22px; }
+</style></head>
+<body><div class="app">
+  <div class="sidebar">
+    <div class="brand"><div class="brand-mark"><span>N</span></div><div class="brand-name">Nexus</div></div>
+    <div class="nav"><div class="nav-item">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v6H4zM4 12h10v8H4zM16 12h4v8h-4z"/></svg>
+            <span>Daily Briefing</span></div><div class="nav-item">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></svg>
+            <span>Dashboard</span></div><div class="nav-item">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4a7 7 0 100 14 7 7 0 000-14zM21 21l-4.3-4.3"/></svg>
+            <span>Search</span></div><div class="nav-item">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v10l-8 4-8-4V7z"/></svg>
+            <span>Knowledge Explorer</span></div><div class="nav-item">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4v16h16M8 14l3-3 3 3 5-5"/></svg>
+            <span>Knowledge Timeline</span></div><div class="nav-item">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12m-9 0a9 9 0 1018 0 9 9 0 10-18 0M12 12m-5 0a5 5 0 1010 0 5 5 0 10-10 0"/></svg>
+            <span>Technology Radar</span></div><div class="nav-item">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18l5-6 4 3 7-9"/></svg>
+            <span>Trend Explorer</span></div><div class="nav-item active">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 7h7l-6 5 2 8-6-4-6 4 2-8-6-5h7z"/></svg>
+            <span>Impact Analysis</span></div><div class="nav-item">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4zM4 6l8 5 8-5"/></svg>
+            <span>Learning Center</span></div><div class="nav-item">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.5 5 5.5.8-4 4 1 5.5-5-2.6-5 2.6 1-5.5-4-4 5.5-.8z"/></svg>
+            <span>AI Assistant</span></div></div>
+    <div class="user-box"><div class="avatar">AC</div><div><div class="user-name">Alex Chen</div><div class="user-role">Senior Full-Stack Engineer</div></div></div>
+  </div>
+  <div class="main">
+    <div class="topbar">
+      <div><h1>Impact Analysis</h1><div class="sub">What a development means for your specific stack</div></div>
+      <div style="display:flex;align-items:center;">
+        <div class="search-pill">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#8B96AC" stroke-width="2"><path d="M11 4a7 7 0 100 14 7 7 0 000-14zM21 21l-4.3-4.3"/></svg>
+          Search the knowledge graph…
+        </div>
+        <div class="bell"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#8B96AC" stroke-width="2"><path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.7 21a2 2 0 01-3.4 0"/></svg></div>
+      </div>
+    </div>
+    <div class="content">
+    <div style="max-width:780px;margin:0 auto;">
+      <div class="mono" style="font-size:11px;letter-spacing:0.6px;text-transform:uppercase;color:#00C4EE;margin-bottom:6px;">Impact Analysis</div>
+      <h2 class="page-title" style="margin-bottom:20px;">next-auth prototype pollution — impact on your stack</h2>
+      <div class="card" style="padding:18px;margin-bottom:18px;display:flex;justify-content:space-between;align-items:center;">
+        <div class="conf"><div class="conf-segs"><span class="conf-seg on "></span><span class="conf-seg on "></span><span class="conf-seg on "></span><span class="conf-seg on "></span></div><span class="conf-label ">Verified · 99%</span><span class="conf-meta">· 6 sources</span></div>
+        <span class="tag alert">Critical · action required</span>
+      </div>
+      
+      <div class="card" style="padding:16px 18px;margin-bottom:12px;display:flex;justify-content:space-between;align-items:center;">
+        <div><div style="font-size:13.5px;font-weight:600;">Authentication service</div><div style="font-size:12.5px;color:#8B96AC;margin-top:3px;">Direct dependency on the affected next-auth version.</div></div>
+        <span class="mono" style="font-size:11px;padding:5px 11px;border-radius:6px;background:rgba(255,255,255,0.06);color:#FF6000;">Critical</span>
+      </div>
+      <div class="card" style="padding:16px 18px;margin-bottom:12px;display:flex;justify-content:space-between;align-items:center;">
+        <div><div style="font-size:13.5px;font-weight:600;">Admin dashboard</div><div style="font-size:12.5px;color:#8B96AC;margin-top:3px;">Shares the same session middleware.</div></div>
+        <span class="mono" style="font-size:11px;padding:5px 11px;border-radius:6px;background:rgba(255,255,255,0.06);color:#FF6000;">Critical</span>
+      </div>
+      <div class="card" style="padding:16px 18px;margin-bottom:12px;display:flex;justify-content:space-between;align-items:center;">
+        <div><div style="font-size:13.5px;font-weight:600;">Public marketing site</div><div style="font-size:12.5px;color:#8B96AC;margin-top:3px;">Does not use next-auth.</div></div>
+        <span class="mono" style="font-size:11px;padding:5px 11px;border-radius:6px;background:rgba(255,255,255,0.06);color:#00C4EE;">None</span>
+      </div>
+      <div class="card" style="padding:18px;margin-top:6px;border-style:dashed;border-color:rgba(0,196,238,0.35);">
+        <div style="font-size:13px;font-weight:600;margin-bottom:6px;">Recommended next step</div>
+        <div style="font-size:13px;color:#9AA5BD;">Patch to next-auth 5.2.3 in the authentication service and admin dashboard before end of day.</div>
+      </div>
+    </div></div>
+  </div>
+</div></body></html>

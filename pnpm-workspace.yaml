@@ -1,0 +1,18 @@
+packages:
+  - "apps/*"
+  - "packages/*"
+# Deliberately false for all four: @nexus/openclaw-plugin depends on
+# "openclaw" only as a devDependency/peerDependency to resolve TypeScript
+# types (openclaw/plugin-sdk/plugin-entry) — the real OpenClaw host process
+# provides the actual runtime at deployment time, this repo never runs it.
+# tsc only needs the package's shipped .d.ts files, which do not require a
+# postinstall/build step. tree-sitter-bash in particular (native compiled
+# addon, part of openclaw's sandbox/exec extensions) has no reason to build
+# in this repo at all, since the Nexus plugin registers three read-only
+# tools and requests none of that capability surface.
+allowBuilds:
+  '@google/genai': false
+  esbuild: true
+  openclaw: false
+  protobufjs: false
+  tree-sitter-bash: false

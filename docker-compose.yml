@@ -1,0 +1,29 @@
+# Local development only. Not a production deployment manifest — see
+# IMPLEMENTATION_PLAN.md Section 40 for the production infrastructure plan
+# (infrastructure/terraform + kubernetes, not yet built).
+#
+# This compose file exists so a new engineer can run `docker compose up -d`
+# and get the same Postgres this environment used directly (this sandbox
+# installed Postgres via apt because no Docker daemon was available here —
+# docker-compose is the correct path on a real developer machine).
+
+services:
+  postgres:
+    image: postgres:16
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: nexus_dev_password
+      POSTGRES_DB: nexus_dev
+    ports:
+      - "5432:5432"
+    volumes:
+      - nexus_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  nexus_postgres_data:

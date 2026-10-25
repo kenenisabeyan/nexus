@@ -1,0 +1,21 @@
+{
+  "id": "nexus",
+  "name": "Nexus",
+  "description": "Verified professional knowledge intelligence — daily briefing, search, and evidence trails — surfaced as OpenClaw agent tools.",
+  "contracts": {
+    "tools": ["nexus_daily_briefing", "nexus_search", "nexus_item_detail"]
+  },
+  "activation": {
+    "onStartup": true
+  },
+  "configSchema": {
+    "type": "object",
+    "properties": {
+      "apiUrl": {
+        "type": "string",
+        "description": "Base URL of the Nexus API, e.g. https://your-nexus-instance.example.com/api"
+      }
+    },
+    "additionalProperties": false
+  }
+}

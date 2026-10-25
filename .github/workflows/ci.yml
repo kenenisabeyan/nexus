@@ -1,0 +1,68 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  api:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: nexus_ci_password
+          POSTGRES_DB: nexus_test
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U postgres"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      DATABASE_URL: postgresql://postgres:nexus_ci_password@localhost:5432/nexus_test
+      WEB_ORIGIN: http://localhost:5173
+      NODE_ENV: test
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: "pnpm"
+      - run: pnpm install --frozen-lockfile
+      - name: Typecheck
+        run: pnpm --filter @nexus/api typecheck
+      - name: Run migrations
+        run: pnpm --filter @nexus/api migrate
+      - name: Unit + integration tests
+        run: pnpm --filter @nexus/api test
+      - name: Build
+        run: pnpm --filter @nexus/api build
+
+  web:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: "pnpm"
+      - run: pnpm install --frozen-lockfile
+      - name: Typecheck
+        run: pnpm --filter @nexus/web typecheck
+      - name: Build
+        run: pnpm --filter @nexus/web build
+
+  # Deliberately no "deploy" job yet — per IMPLEMENTATION_LEDGER.md, there is
+  # no staging or production environment to deploy to as of Milestone 0.
+  # Adding a deploy stage before an environment exists to receive it would
+  # be exactly the kind of premature complexity the master implementation
+  # prompt warns against (Section 44).

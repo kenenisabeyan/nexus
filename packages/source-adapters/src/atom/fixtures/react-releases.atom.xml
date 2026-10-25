@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:https://github.com/react/react/releases</id>
+  <link type="text/html" rel="alternate" href="https://github.com/react/react/releases"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/react/react/releases.atom"/>
+  <title>Release notes from react</title>
+  <updated>2026-07-21T15:21:31Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Repository/10270250/v19.2.8</id>
+    <updated>2026-07-21T15:49:09Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/react/react/releases/tag/v19.2.8"/>
+    <title>19.2.8 (July 21st, 2026)</title>
+    <content type="html">&lt;h2&gt;React Server Components&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Performance improvements when decoding&lt;br&gt;
+(&lt;a href=&quot;https://github.com/facebook/react/pull/37087&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/react/react/pull/37087/hovercard&quot;&gt;#37087&lt;/a&gt; by &lt;a class=&quot;user-mention notranslate&quot; data-hovercard-type=&quot;user&quot; data-hovercard-url=&quot;/users/eps1lon/hovercard&quot; data-octo-click=&quot;hovercard-link-click&quot; data-octo-dimensions=&quot;link_type:self&quot; href=&quot;https://github.com/eps1lon&quot;&gt;@eps1lon&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>eps1lon</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/12292047?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/10270250/v19.1.9</id>
+    <updated>2026-07-21T15:48:51Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/react/react/releases/tag/v19.1.9"/>
+    <title>19.1.9 (July 21st, 2026)</title>
+    <content type="html">&lt;h2&gt;React Server Components&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Performance improvements when decoding&lt;br&gt;
+(&lt;a href=&quot;https://github.com/facebook/react/pull/37088&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/react/react/pull/37088/hovercard&quot;&gt;#37088&lt;/a&gt; by &lt;a class=&quot;user-mention notranslate&quot; data-hovercard-type=&quot;user&quot; data-hovercard-url=&quot;/users/eps1lon/hovercard&quot; data-octo-click=&quot;hovercard-link-click&quot; data-octo-dimensions=&quot;link_type:self&quot; href=&quot;https://github.com/eps1lon&quot;&gt;@eps1lon&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>eps1lon</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/12292047?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/10270250/v19.0.8</id>
+    <updated>2026-07-21T15:48:28Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/react/react/releases/tag/v19.0.8"/>
+    <title>19.0.8 (July 21st, 2026)</title>
+    <content type="html">&lt;h2&gt;React Server Components&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Performance improvements when decoding&lt;br&gt;
+(&lt;a href=&quot;https://github.com/facebook/react/pull/37089&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/react/react/pull/37089/hovercard&quot;&gt;#37089&lt;/a&gt; by &lt;a class=&quot;user-mention notranslate&quot; data-hovercard-type=&quot;user&quot; data-hovercard-url=&quot;/users/eps1lon/hovercard&quot; data-octo-click=&quot;hovercard-link-click&quot; data-octo-dimensions=&quot;link_type:self&quot; href=&quot;https://github.com/eps1lon&quot;&gt;@eps1lon&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>eps1lon</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/12292047?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/10270250/v19.2.7</id>
+    <updated>2026-06-01T18:04:24Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/react/react/releases/tag/v19.2.7"/>
+    <title>19.2.7 (June 1st, 2026)</title>
+    <content type="html">&lt;h2&gt;React Server Components&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Fixed missing &lt;code&gt;FormData&lt;/code&gt; entries in Server Actions which regressed in 19.2.6&lt;br&gt;
+(&lt;a href=&quot;https://github.com/facebook/react/pull/36566&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/react/react/pull/36566/hovercard&quot;&gt;#36566&lt;/a&gt; by &lt;a class=&quot;user-mention notranslate&quot; data-hovercard-type=&quot;user&quot; data-hovercard-url=&quot;/users/unstubbable/hovercard&quot; data-octo-click=&quot;hovercard-link-click&quot; data-octo-dimensions=&quot;link_type:self&quot; href=&quot;https://github.com/unstubbable&quot;&gt;@unstubbable&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>eps1lon</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/12292047?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/10270250/v19.1.8</id>
+    <updated>2026-06-01T18:04:14Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/react/react/releases/tag/v19.1.8"/>
+    <title>19.1.8 (June 1st, 2026)</title>
+    <content type="html">&lt;h2&gt;React Server Components&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Fixed missing &lt;code&gt;FormData&lt;/code&gt; entries in Server Actions which regressed in 19.1.7&lt;br&gt;
+(&lt;a href=&quot;https://github.com/facebook/react/pull/36567&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/react/react/pull/36567/hovercard&quot;&gt;#36567&lt;/a&gt; by &lt;a class=&quot;user-mention notranslate&quot; data-hovercard-type=&quot;user&quot; data-hovercard-url=&quot;/users/unstubbable/hovercard&quot; data-octo-click=&quot;hovercard-link-click&quot; data-octo-dimensions=&quot;link_type:self&quot; href=&quot;https://github.com/unstubbable&quot;&gt;@unstubbable&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>eps1lon</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/12292047?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/10270250/v19.0.7</id>
+    <updated>2026-06-01T18:04:09Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/react/react/releases/tag/v19.0.7"/>
+    <title>19.0.7 (June 1st, 2026)</title>
+    <content type="html">&lt;h2&gt;React Server Components&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Fixed missing &lt;code&gt;FormData&lt;/code&gt; entries in Server Actions which regressed in 19.0.6&lt;br&gt;
+(&lt;a href=&quot;https://github.com/facebook/react/pull/36568&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/react/react/pull/36568/hovercard&quot;&gt;#36568&lt;/a&gt; by &lt;a class=&quot;user-mention notranslate&quot; data-hovercard-type=&quot;user&quot; data-hovercard-url=&quot;/users/unstubbable/hovercard&quot; data-octo-click=&quot;hovercard-link-click&quot; data-octo-dimensions=&quot;link_type:self&quot; href=&quot;https://github.com/unstubbable&quot;&gt;@unstubbable&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>eps1lon</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/12292047?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/10270250/v19.2.6</id>
+    <updated>2026-05-06T17:33:20Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/react/react/releases/tag/v19.2.6"/>
+    <title>19.2.6 (May 6th, 2026)</title>
+    <content type="html">&lt;h2&gt;React Server Components&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Type hardening and performance improvements&lt;br&gt;
+(&lt;a href=&quot;https://github.com/facebook/react/pull/36425&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/react/react/pull/36425/hovercard&quot;&gt;#36425&lt;/a&gt; by &lt;a class=&quot;user-mention notranslate&quot; data-hovercard-type=&quot;user&quot; data-hovercard-url=&quot;/users/eps1lon/hovercard&quot; data-octo-click=&quot;hovercard-link-click&quot; data-octo-dimensions=&quot;link_type:self&quot; href=&quot;https://github.com/eps1lon&quot;&gt;@eps1lon&lt;/a&gt; and &lt;a class=&quot;user-mention notranslate&quot; data-hovercard-type=&quot;user&quot; data-hovercard-url=&quot;/users/unstubbable/hovercard&quot; data-octo-click=&quot;hovercard-link-click&quot; data-octo-dimensions=&quot;link_type:self&quot; href=&quot;https://github.com/unstubbable&quot;&gt;@unstubbable&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>eps1lon</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/12292047?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/10270250/v19.1.7</id>
+    <updated>2026-05-06T17:33:35Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/react/react/releases/tag/v19.1.7"/>
+    <title>19.1.7 (May 6th, 2026)</title>
+    <content type="html">&lt;h2&gt;React Server Components&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Type hardening and performance improvements&lt;br&gt;
+(&lt;a href=&quot;https://github.com/facebook/react/pull/36425&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/react/react/pull/36425/hovercard&quot;&gt;#36425&lt;/a&gt; by &lt;a class=&quot;user-mention notranslate&quot; data-hovercard-type=&quot;user&quot; data-hovercard-url=&quot;/users/eps1lon/hovercard&quot; data-octo-click=&quot;hovercard-link-click&quot; data-octo-dimensions=&quot;link_type:self&quot; href=&quot;https://github.com/eps1lon&quot;&gt;@eps1lon&lt;/a&gt; and &lt;a class=&quot;user-mention notranslate&quot; data-hovercard-type=&quot;user&quot; data-hovercard-url=&quot;/users/unstubbable/hovercard&quot; data-octo-click=&quot;hovercard-link-click&quot; data-octo-dimensions=&quot;link_type:self&quot; href=&quot;https://github.com/unstubbable&quot;&gt;@unstubbable&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>eps1lon</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/12292047?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/10270250/v19.0.6</id>
+    <updated>2026-05-06T17:33:39Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/react/react/releases/tag/v19.0.6"/>
+    <title>19.0.6 (May 6th, 2026)</title>
+    <content type="html">&lt;h2&gt;React Server Components&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Type hardening and performance improvements&lt;br&gt;
+(&lt;a href=&quot;https://github.com/facebook/react/pull/36425&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/react/react/pull/36425/hovercard&quot;&gt;#36425&lt;/a&gt; by &lt;a class=&quot;user-mention notranslate&quot; data-hovercard-type=&quot;user&quot; data-hovercard-url=&quot;/users/eps1lon/hovercard&quot; data-octo-click=&quot;hovercard-link-click&quot; data-octo-dimensions=&quot;link_type:self&quot; href=&quot;https://github.com/eps1lon&quot;&gt;@eps1lon&lt;/a&gt; and &lt;a class=&quot;user-mention notranslate&quot; data-hovercard-type=&quot;user&quot; data-hovercard-url=&quot;/users/unstubbable/hovercard&quot; data-octo-click=&quot;hovercard-link-click&quot; data-octo-dimensions=&quot;link_type:self&quot; href=&quot;https://github.com/unstubbable&quot;&gt;@unstubbable&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>eps1lon</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/12292047?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/10270250/eslint-plugin-react-hooks@7.1.1</id>
+    <updated>2026-04-17T20:51:48Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/react/react/releases/tag/eslint-plugin-react-hooks%407.1.1"/>
+    <title>eslint-plugin-react-hooks@7.1.1 (April 17, 2026)</title>
+    <content type="html">&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; 7.1.0 accidentally removed the &lt;code&gt;component-hook-factories&lt;/code&gt; rule, causing errors for users who referenced it in their ESLint config. This is now fixed.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Add deprecated no-op &lt;code&gt;component-hook-factories&lt;/code&gt; rule for backwards compatibility. (&lt;a href=&quot;https://github.com/mofeiZ&quot;&gt;@mofeiZ&lt;/a&gt; in &lt;a href=&quot;https://github.com/facebook/react/pull/36307&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/react/react/pull/36307/hovercard&quot;&gt;#36307&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>mofeiZ</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/34200447?s=60&amp;v=4"/>
+  </entry>
+</feed>

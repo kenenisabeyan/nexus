@@ -17,7 +17,7 @@ ALTER TABLE knowledge_items
   CHECK (verification_status IN ('unverified', 'verified', 'rejected'));
 
 ALTER TABLE knowledge_items
-  ADD COLUMN IF NOT EXISTS reviewer_id UUID REFERENCES users(id) ON DELETE SET NULL,
+  ADD COLUMN IF NOT EXISTS reviewer_id INTEGER REFERENCES users(id) ON DELETE SET NULL,
   ADD COLUMN IF NOT EXISTS rejection_reason TEXT,
   ADD COLUMN IF NOT EXISTS reviewed_at TIMESTAMPTZ;
 
